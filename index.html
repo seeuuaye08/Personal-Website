@@ -31,15 +31,34 @@
 				<li style="float:right;"><a href="index.html"><img class="home-icon" src="Images/home-icon.gif">Home</a></li>
 				<li class="dropdown" style="float:right;">
 					<a href="#" class="dropbtn">Contact</a>
+					<div class="dropdown-items">
+						<a class="github" href="https://github.com/seeuuaye08">GitHub</a>
+						<a class="linkedin" href="#">LinkedIn</a>
+					</div>
 				</li>
 				<li style="float:right;"><a href="about.html">About</a></li>
 				<div class="social-icons">
-					<img class="social-icon" src="Images/github-icon-idle.jpg" title="My GitHub Profile" onmouseover="this.src='Images/github-icon-active.png'" onmouseout="this.src='Images/github-icon-idle.jpg'">
-					<img class="social-icon" src="Images/linkedin-icon-idle.jpg" title="My LinkedIn Profile" onmouseover="this.src='Images/linkedin-icon-active.png'" onmouseout="this.src='Images/linkedin-icon-idle.jpg'">
-					<img class="social-icon" src="Images/fcc-icon-idle.png" title="My FreeCodeCamp Profile" onmouseover="this.src='Images/fcc-icon-active.png'" onmouseout="this.src='Images/fcc-icon-idle.png'">
+					<img id="github" class="social-icon" src="Images/github-icon-idle.jpg" title="My GitHub Profile" onmouseover="this.src='Images/github-icon-active.png'" onmouseout="this.src='Images/github-icon-idle.jpg'" onclick="onSocialClick(this)">
+					<img id="linkedin" class="social-icon" src="Images/linkedin-icon-idle.jpg" title="My LinkedIn Profile" onmouseover="this.src='Images/linkedin-icon-active.png'" onmouseout="this.src='Images/linkedin-icon-idle.jpg'" onclick="onSocialClick(this)">
+					<img id="fcc" class="social-icon" src="Images/fcc-icon-idle.png" title="My FreeCodeCamp Profile" onmouseover="this.src='Images/fcc-icon-active.png'" onmouseout="this.src='Images/fcc-icon-idle.png'" onclick="onSocialClick(this)">
 				</div>
 			</ul>
 		</div>
-		<br><br><h1>Welcome to Charles' homepage!</h1>						
+		<br><br><h1>Welcome to Charles' homepage!</h1>
+
+		<script type="text/javascript">
+			function onSocialClick(image) {
+				if(image == document.getElementById("github")) {
+					window.location.href="https://github.com/seeuuaye08";
+				}
+				else if(image == document.getElementById("linkedin")) {
+					window.location.href="https://www.linkedin.com/in/charles-andrews-ba5a5165";
+				}
+				else if(image == document.getElementById("fcc")) {
+					window.location.href="https://www.freecodecamp.com/seeuuaye08";
+				}
+				else return;
+			}
+		</script>						
 	</body>
 </html>
